@@ -1,0 +1,14 @@
+img {
+  width: 200px;
+  height: 200px;
+  float: left;
+  margin-right: 10px;
+}
+
+.card {
+  /* float: left; */
+}
+body{
+  background: url("foodpic.jpg") no-repeat center center fixed;
+   background-size: cover;
+   background-repeat: no-repeat;}
