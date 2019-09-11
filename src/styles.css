@@ -1,4 +1,16 @@
-img {
+/* * {
+  border: 1px solid red;
+} */
+
+#drinkImg {
+  width: 200px;
+}
+
+#mealImg {
+  width: 200px;
+}
+
+#mealImg, #drinkImg, img {
   width: 200px;
   height: 200px;
   float: left;
@@ -6,9 +18,11 @@ img {
 }
 
 .card {
-  /* float: left; */
+  padding: 10px;
 }
 body{
-  background: url("foodpic.jpg") no-repeat center center fixed;
-   background-size: cover;
-   background-repeat: no-repeat;}
+  /* background-image: url("foodpic.jpg"); */
+  background-size: cover;
+  background-position: center;
+
+}
