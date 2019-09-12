@@ -1,28 +1,55 @@
-/* * {
-  border: 1px solid red;
-} */
-
-#drinkImg {
-  width: 200px;
-}
-
-#mealImg {
-  width: 200px;
-}
-
-#mealImg, #drinkImg, img {
+#mealImg, img {
   width: 200px;
   height: 200px;
   float: left;
   margin-right: 10px;
+  border-radius: 50%;
+}
+#drinkImg {
+  width: 200px;
+  height: 200px;
+  float: left;
+  margin-right: 10px;
+  border-radius: 50%;
 }
 
 .card {
   padding: 10px;
+  background-color: rgba(100, 100, 100, 0.8);
+  color: white;
+  display: none;
 }
 body{
-  /* background-image: url("foodpic.jpg"); */
-  background-size: cover;
-  background-position: center;
+  background: url("https://images.unsplash.com/photo-1564697366559-f2b400ce529a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80") no-repeat center center fixed;
+   background-size: cover;
+   background-repeat: no-repeat;
+   text-align: center;
+}
+.header{
+  color: white;
+}
+button {
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  border-radius: 50%;
+  text-shadow: 2px 2px 8px black;
+}
 
+button:hover {
+  background-color: #e6e6e6;
+  border-radius: 50%;
+  text-shadow: 2px 2px 8px black;
+}
+
+button:active {
+  background-color: #e6e6e6;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  border-radius: 50%;
+  text-shadow: 2px 2px 8px black;
 }

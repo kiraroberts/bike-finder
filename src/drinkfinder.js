@@ -35,5 +35,22 @@ export class MealFinder {
       request.send();
     });
   }
+}
 
+export class GifFinder{
+  randomGif(){
+    return new Promise(function(resolve, reject) {
+      let request = new XMLHttpRequest();
+      const url = `https://api.giphy.com/v1/gifs/random?api_key=${process.env.GIF_KEY}&tag=food, drink&rating=G`;
+      request.onload = function() {
+        if (this.status === 200) {
+          resolve(request.response);
+        } else {
+          reject(Error(request.statusText));
+        }
+      }
+      request.open("GET", url, true);
+      request.send();
+    });
+  }
 }
