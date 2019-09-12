@@ -5,8 +5,28 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 
 $(document).ready(function() {
-  $('.drinkButton').click(function(event){
+  $('.searchButton').click(function(event){
     event.preventDefault();
+
+    const drinkInput = $('#drinkInput').val();
+    $('#drinkInput').val("");
+
+    let drinkFinder = new DrinkFinder();
+    let promiseDrinkSearch = drinkFinder.searchDrink(drinkInput);
+
+    promiseDrinkSearch.then(function(response) {
+      const body = JSON.parse(response);
+      console.log(body);
+      for (let i = 0; i < body.drinks.length; i++) {
+        $('#drinkSearchOutput').append(`<li>${body.drinks[i].strDrink}</li>`);
+      }
+      $('.card').show();
+    });
+  });
+
+  $('.randomButton').click(function(event){
+    event.preventDefault();
+
 
       let drinkFinder = new DrinkFinder();
       let mealFinder = new MealFinder();
@@ -14,7 +34,6 @@ $(document).ready(function() {
       let promiseRandomDrink = drinkFinder.randomDrink();
       let promiseRandomMeal = mealFinder.randomMeal();
       let promiseGif = gifFinder.randomGif();
-
 
       promiseRandomDrink.then(function(response) {
         const body = JSON.parse(response);
